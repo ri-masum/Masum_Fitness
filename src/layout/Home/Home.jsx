@@ -1,4 +1,12 @@
+import { useLoaderData } from "react-router-dom";
+import Service from "../../components/Service/Service";
+
+
 const Home = () => {
+    const datas=useLoaderData();
+console.log(datas);
+  
+
   return (
     <div className="max-w-7xl mx-auto bg-white">
       <div
@@ -24,25 +32,14 @@ const Home = () => {
           Welcome to Masum <br />
           Fitness{" "}
         </h1>
-        <h3 className="text-black text-center text-xl font-serif ">
-          Our Service
+        <h3 className="text-black text-center text-xl font-serif mt-10">
+          Our Services
         </h3>
-       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
-       <div className="card w-96 bg-base-100 shadow-xl text-black">
-          <figure>
-            <img
-              src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              alt="Shoes"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
-            </div>
-          </div>
-        </div>
+       <div className="grid grid-cols-1 md:grid-cols-3 gap-4  mt-5 p-4">
+
+      {
+        datas.map(data=><Service key={data.id} datas={data}></Service>)
+      }
        
        </div>
       </div>

@@ -10,6 +10,7 @@ import Root from './Root/Root.jsx';
 import Home from './layout/Home/Home';
 import Login from './layout/Login/Login';
 import SignUp from './layout/SignUp/SignUp';
+import DetailsService from './components/DetailsService/DetailsService';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,8 @@ const router = createBrowserRouter([
     children:[
       {
         path:"/",
-        element:<Home></Home>
+        element:<Home></Home>,
+        loader:()=>fetch('data.json')
       },
       {
         path:"/login",
@@ -27,6 +29,11 @@ const router = createBrowserRouter([
       {
         path:"/signup",
         element:<SignUp></SignUp>
+      },
+      {
+        path:"/details/:id",
+        element:<DetailsService></DetailsService>,
+        loader:()=>fetch('/data.json')
       }
     ]
   },
