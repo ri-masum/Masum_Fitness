@@ -1,12 +1,14 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 
 
 const Root = () => {
     return (
-        <div>
+        <div className="bg-gray-800 min-h-screen text-white	">
             <Navbar></Navbar>
-            <Outlet></Outlet>
+            <Outlet ></Outlet>
+            <Footer></Footer>
         </div>
     );
 };
