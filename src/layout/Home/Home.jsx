@@ -27,12 +27,12 @@ console.log(datas);
           </div>
         </div>
       </div>
-      <div>
+      <div className="mt-10">
         <h1 className="text-3xl font-semibold text-center uppercase text-black ">
           Welcome to Masum <br />
           Fitness{" "}
         </h1>
-        <h3 className="text-black text-center text-xl font-serif mt-10">
+        <h3 className="text-yellow-950 text-center text-xl font-serif  font-bold mt-10 ">
           Our Services
         </h3>
        <div className="grid grid-cols-1 md:grid-cols-3 gap-4  mt-5 p-4">

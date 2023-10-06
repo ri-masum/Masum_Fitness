@@ -1,20 +1,30 @@
-import {  useParams } from "react-router-dom";
+import {  useLoaderData, useParams } from "react-router-dom";
 
 
 const DetailsService = () => {
-    // const detailsData=useLoaderData()
-    // console.log(detailsData);
-    const { service_name, trainer_name, workout_hour, picture_url,details ,id} = useParams()
-console.log(service_name);
+    const detailsData=useLoaderData()
+    console.log(detailsData);
+    const {id} = useParams()
+    const intID=parseInt(id);
+    const detialsTraining=detailsData.find(d=>d.id ===intID)
+    console.log(detialsTraining);
+    const {service_name, trainer_name, workout_hour,price, picture_url,details }=detialsTraining
+    
+
     return (
-        <div className="h-screen">
-            details{id}
-            
+        <div className="min-h-screen text-white max-w-7xl mx-auto">
+
             <img src={picture_url} alt="" />
-            <h1>{service_name}</h1>
-            <h1>{trainer_name}</h1>
-            <h1>{workout_hour}</h1>
-            <h1>{details}</h1>
+            <h1 className="text-4xl mt-10 text-right text-yellow-400"> {service_name}</h1>
+            <div className="flex justify-evenly mt-10">
+           
+            <h1 className="text-3xl">Duiration: <span className="text-yellow-500">{workout_hour}</span> </h1>
+            <h1 className="text-2xl">Trainer Name: {trainer_name}</h1>
+            <h1 className="text-2xl ">Price:  <span className="text-yellow-500">{price}</span> </h1>
+            
+            </div>
+           <h1 className="text-center mt-10 mb-3 text-4xl font-extrabold">About the Training</h1>
+            <h1 className="textarea-sm">{details}</h1>
             
         </div>
     );

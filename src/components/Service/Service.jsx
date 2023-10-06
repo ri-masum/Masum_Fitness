@@ -2,13 +2,13 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 const Service = ({ datas }) => {
 
-  const { service_name, trainer_name, workout_hour, picture_url,details ,id} = datas;
+  const { service_name,  picture_url,details ,id} = datas;
 //   console.log(datas);
 
  
   return (
     <div className="text-white">
-      <div className="card  bg-gray-800 shadow-xl h-[450px]">
+      <div className="card  bg-gray-600 shadow-xl h-[450px]">
         <figure>
           <img
             src={picture_url}
