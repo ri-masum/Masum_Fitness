@@ -1,9 +1,11 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Swal from 'sweetalert2'
 
 
 const SignUp = () => {
+    const navigate=useNavigate()
     const {signup}=useContext(AuthContext);
     const handleSignUp=e=>{
         e.preventDefault()
@@ -14,9 +16,22 @@ const SignUp = () => {
         signup(email,pass)
         .then(result=>{
             console.log(result.user);
+            Swal.fire(
+                'SuccessFully SignIn!',
+                'Now press Okey!',
+                'success'
+              )
+    
+              navigate('/')
         })
         .catch(err=>{
             console.error(err);
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: `${err.message}`
+
+              })
         })
     }
 

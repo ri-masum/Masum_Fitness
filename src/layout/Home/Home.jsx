@@ -1,11 +1,9 @@
 import { useLoaderData } from "react-router-dom";
 import Service from "../../components/Service/Service";
 
-
 const Home = () => {
-    const datas=useLoaderData();
-// console.log(datas);
-  
+  const datas = useLoaderData();
+  // console.log(datas);
 
   return (
     <div className="max-w-7xl mx-auto bg-white">
@@ -32,16 +30,38 @@ const Home = () => {
           Welcome to Masum <br />
           Fitness{" "}
         </h1>
+
+        <div className="text-black">
+          <h1 className="text-3xl font-thin text-center mt-10 mb-10 text-black">TransFormation</h1>
+
+          <div className="carousel carousel-end rounded-box h-96 gap-0">
+  <div className="carousel-item">
+    <img src="https://i.ibb.co/FX6PWWQ/Gym-Review.jpg" alt="Drink" />
+  </div> 
+ 
+  <div className="carousel-item">
+    <img src="https://i.ibb.co/M2QYypL/Gym-REvirew2.jpg" alt="Drink" />
+  </div> 
+  <div className="carousel-item">
+    <img src="https://i.ibb.co/FX6PWWQ/Gym-Review.jpg" alt="Drink" />
+  </div> 
+  <div className="carousel-item">
+    <img src="https://i.ibb.co/M2QYypL/Gym-REvirew2.jpg" alt="Drink" />
+  </div> 
+ 
+</div>
+        
+        </div>
+
         <h3 className="text-yellow-950 text-center text-xl font-serif  font-bold mt-10 ">
           Our Services
         </h3>
-       <div className="grid grid-cols-1 md:grid-cols-3 gap-4  mt-5 p-4">
 
-      {
-        datas.map(data=><Service key={data.id} datas={data}></Service>)
-      }
-       
-       </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4  mt-5 p-4">
+          {datas.map((data) => (
+            <Service key={data.id} datas={data}></Service>
+          ))}
+        </div>
       </div>
     </div>
   );

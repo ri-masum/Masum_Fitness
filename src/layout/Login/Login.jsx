@@ -1,9 +1,12 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import googlePng from "/google.png";
+import Swal from 'sweetalert2'
+
 
 const Login = () => {
+    const navigate=useNavigate()
   const { login, googleLogin } = useContext(AuthContext);
 
   const handleLogin = (e) => {
@@ -25,6 +28,14 @@ const Login = () => {
     googleLogin()
     .then(result=>{
         console.log(result.user);
+        Swal.fire(
+            'SuccessFully SignIn!',
+            'Now press Okey!',
+            'success'
+          )
+
+          navigate('/')
+
 
     })
     .catch(err=>{
