@@ -12,11 +12,11 @@ const DetailsService = () => {
     
 
     return (
-        <div className="min-h-screen text-white max-w-7xl mx-auto">
+        <div className="min-h-screen text-white max-w-7xl mx-auto ">
 
             <img src={picture_url} alt="" />
-            <h1 className="text-4xl mt-10 text-right text-yellow-400"> {service_name}</h1>
-            <div className="flex justify-evenly mt-10">
+            <h1 className="text-4xl mt-10 md:text-right text-yellow-400"> {service_name}</h1>
+            <div className="flex flex-col md:flex-row md:justify-evenly mt-10">
            
             <h1 className="text-3xl">Duiration: <span className="text-yellow-500">{workout_hour}</span> </h1>
             <h1 className="text-2xl">Trainer Name: {trainer_name}</h1>
