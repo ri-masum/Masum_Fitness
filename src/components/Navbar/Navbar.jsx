@@ -1,7 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import {  NavLink } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
 const Navbar = () => {
+    const {user,logOut}=useContext(AuthContext);
     return (
         <div className=" max-w-full bg-black text-white mx-auto py-5" >
           <div className="max-w-7xl flex flex-col md:flex-row justify-between mx-auto ">
@@ -24,7 +27,12 @@ const Navbar = () => {
       >
         Blogs
       </NavLink> */}
-            <NavLink
+
+
+{
+        user ? <button onClick={()=>logOut()} >Logout</button> :
+        <>
+          <NavLink
         to="/login"
         className={({ isActive, isPending }) => 
           isPending ? "pending" : isActive ? "uppercase text-gray-600" : ""
@@ -39,7 +47,13 @@ const Navbar = () => {
         }
       >
         SignUp
-      </NavLink>
+      </NavLink></>
+
+
+
+      }
+          
+    
          </div>
             
            

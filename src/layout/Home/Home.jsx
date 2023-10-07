@@ -4,7 +4,7 @@ import Service from "../../components/Service/Service";
 
 const Home = () => {
     const datas=useLoaderData();
-console.log(datas);
+// console.log(datas);
   
 
   return (

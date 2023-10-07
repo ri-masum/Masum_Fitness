@@ -7,7 +7,7 @@ const DetailsService = () => {
     const {id} = useParams()
     const intID=parseInt(id);
     const detialsTraining=detailsData.find(d=>d.id ===intID)
-    console.log(detialsTraining);
+    // console.log(detialsTraining);
     const {service_name, trainer_name, workout_hour,price, picture_url,details }=detialsTraining
     
 
