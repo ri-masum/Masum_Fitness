@@ -13,6 +13,9 @@ const SignUp = () => {
         const pass=e.target.password.value;
         console.log(email,pass);
 
+       
+        
+
         signup(email,pass)
         .then(result=>{
             console.log(result.user);

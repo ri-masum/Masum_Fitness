@@ -14,13 +14,25 @@ const Login = () => {
     const email = e.target.email.value;
     const pass = e.target.password.value;
     console.log(email, pass);
-
     login(email, pass)
       .then((result) => {
         console.log(result.user);
+        Swal.fire(
+            'SuccessFully SignIn!',
+            'Now press Okey!',
+            'success'
+          )
+
+        navigate('/')
       })
       .catch((err) => {
         console.error(err);
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: `${err.message}`
+
+          })
       });
   };
  
