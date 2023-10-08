@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Service from "../../components/Service/Service";
 import Transformation from "../../components/Transformation/Transformation";
 import Header from "../../components/Header/Header";
+import Trainers from "../../components/Trainers/Trainers";
 
 const Home = () => {
   const datas = useLoaderData();
@@ -9,7 +10,6 @@ const Home = () => {
 
   return (
     <div className="max-w-7xl mx-auto bg-white">
-
       <Header></Header>
       <div className="mt-10">
         <h1 className="text-3xl font-semibold text-center uppercase text-black ">
@@ -17,11 +17,19 @@ const Home = () => {
           Fitness{" "}
         </h1>
 
-       <Transformation></Transformation>
+        <div>
+          <h1 className="text-3xl font-thin text-center mt-10 mb-10 text-black">
+            Our Trainers
+          </h1>
 
-        <h3 className="text-yellow-950 text-center text-xl font-serif  font-bold mt-10 ">
+          <Trainers></Trainers>
+        </div>
+
+        <Transformation></Transformation>
+
+        <h1 className="text-3xl font-thin text-center mt-10 mb-10 text-black">
           Our Services
-        </h3>
+        </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4  mt-5 p-4">
           {datas.map((data) => (
@@ -29,10 +37,7 @@ const Home = () => {
           ))}
         </div>
 
-
-            <div>
-              
-            </div>
+       
       </div>
     </div>
   );

@@ -15,6 +15,7 @@ import AuthProvider from './AuthProvider/AuthProvider';
 import Error from './Error/Error';
 import PrivetRoute from './PrivetRoute/PrivetRoute';
 import Blogs from './layout/Blogs/Blogs';
+import Trainers from './components/Trainers/Trainers';
 
 const router = createBrowserRouter([
   {
@@ -44,7 +45,12 @@ const router = createBrowserRouter([
         path:"/blogs",
         element:<PrivetRoute><Blogs></Blogs></PrivetRoute>,
         loader:()=>fetch('/blogs.json')
-      }
+      },
+      // {
+      //   path:"/trainer",
+      //   element:<Trainers></Trainers>,
+      //   loader:()=>fetch('/trainer.json')
+      // }
     ]
   },
 ]);
