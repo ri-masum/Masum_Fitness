@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "blog_name": "Fitness Fanatics",
+        "picture": "https://media.istockphoto.com/id/1218689796/vector/stay-at-home-doing-exercise-online-and-keep-fit.jpg?s=2048x2048&w=is&k=20&c=PhpORYfgrl2xb29T8WJGCJDUl_SgNPP39KCtGd5Ocqc=",
+        "details": "Fitness Fanatics is your ultimate source for all things related to fitness and health. Our blog is dedicated to helping you achieve your fitness goals, whether it's building muscle, losing weight, or improving your overall well-being. We provide workout routines, nutrition tips, and expert advice to keep you motivated on your fitness journey."
+    },
+    {
+        "id": 2,
+        "blog_name": "FitLife Journey",
+        "picture": "https://media.istockphoto.com/id/1304047765/vector/happy-man-watching-online-sport-webinar-and-doing-exercises.jpg?s=2048x2048&w=is&k=20&c=WilCko8RycW7RMcfF7mm7Eb5gvQT-bMMkTBT76qPBaw=",
+        "details": "Welcome to FitLife Journey, where we believe that fitness is not just a destination but a lifelong journey. Our blog is your companion on this journey, offering insights on sustainable fitness, balanced nutrition, and mental wellness. Join us as we explore the path to a healthier, happier life."
+    },
+    {
+        "id": 3,
+        "blog_name": "Gym Warriors",
+        "picture": "https://media.istockphoto.com/id/1225416253/vector/happy-love-couple-sitting-in-lotus-yoga-pose-beauty-pregnant-woman-and-handsome-man-doing.jpg?s=2048x2048&w=is&k=20&c=JoIS1RqYmyhV0Q-DIriqmmcf1RvKzur8pCMJua20Bu4=",
+        "details": "Gym Warriors is where you'll find inspiration and strategies for conquering the gym and pushing your limits. Whether you're a seasoned gym-goer or just starting out, our blog is packed with workout routines, motivational stories, and tips to help you become a true gym warrior."
+    },
+    {
+        "id": 4,
+        "blog_name": "Healthy Lifestyle Hub",
+        "picture": "https://media.istockphoto.com/id/1397465458/vector/man-and-woman-athletes-doing-lunges-with-dumbbells-near-laptop-sports-video-blog-online.jpg?s=2048x2048&w=is&k=20&c=TVEI5U96R2mFJnEjESljD0cJSh5gcyJzkIanTN1bXbQ=",
+        "details": "At the Healthy Lifestyle Hub, we're dedicated to promoting a well-rounded, healthy lifestyle. Our blog covers a wide range of topics, including nutritious recipes, stress management, and fitness tips. Join us in creating a hub of wellness and vitality in your life."
+    },
+    {
+        "id": 5,
+        "blog_name": "Strength and Conditioning Insider",
+        "picture": "https://media.istockphoto.com/id/1225989610/vector/fitness-blog-and-workout-app-concept.jpg?s=2048x2048&w=is&k=20&c=5_q-bZnORzPjlC8acVYq7_mt9OazByqTds2NioCV7Js=",
+        "details": "Strength and Conditioning Insider is your insider's guide to unlocking your physical potential. Our blog focuses on strength training, conditioning workouts, and performance optimization. Whether you're an athlete or a fitness enthusiast, discover the secrets to reaching new levels of strength and endurance."
+    },
+    {
+        "id": 6,
+        "blog_name": "Yoga Harmony",
+        "picture": "https://media.istockphoto.com/id/1474878707/vector/woman-practices-yoga-and-teaches-to-do-fitness-exercises-female-records-workout-video-for.jpg?s=2048x2048&w=is&k=20&c=qOcgBKdtm97LploM4AgWZa5OL-bm8PrlcAZneQ_CqVU=",
+        "details": "Yoga Harmony is your serene escape into the world of yoga and mindfulness. Our blog offers a sanctuary of peace, with articles on various yoga practices, meditation techniques, and holistic wellness. Join us in finding balance and tranquility in a chaotic world."
+    },
+    {
+        "id": 7,
+        "blog_name": "Running Enthusiast",
+        "picture": "https://media.istockphoto.com/id/1202179893/vector/woman-blogger-running-on-treadmill-recording-video-with-camera-on-tripod-social-network.jpg?s=2048x2048&w=is&k=20&c=-KCngNNEVM-MeuRXbXz0fA7eGtpJIabNVkPs-QXS17c=",
+        "details": "Calling all running enthusiasts! Our blog is dedicated to the love of running. We share training plans, race strategies, and personal stories to fuel your passion for pounding the pavement. Lace up your shoes and join us on the journey to becoming a better runner."
+    },
+    {
+        "id": 8,
+        "blog_name": "Nutrition Nook",
+        "picture": "https://media.istockphoto.com/id/1409551954/photo/continental-breakfast-on-the-picnic-table-weekend-morning-concept.jpg?s=2048x2048&w=is&k=20&c=0ZcgaPF_9As5epmI3QuTHlSqGI5SsdMa2596dmJR5Uc=",
+        "details": "Nutrition Nook is your go-to source for all things related to healthy eating. Explore our blog for nutritious recipes, diet tips, and the latest research on nutrition. Let's delve into the fascinating world of food and discover the keys to a nourishing lifestyle."
+    },
+    {
+        "id": 9,
+        "blog_name": "Mindful Meditation",
+        "picture": "https://media.istockphoto.com/id/1394449576/photo/young-multiracial-latina-woman-meditating-at-home-with-online-video-meditation-lesson-using.jpg?s=2048x2048&w=is&k=20&c=Jbe-ugVF1fygOj1i7ssvIQnNvsYIWYF2_vL7u7j3kRo=",
+        "details": "Mindful Meditation is your gateway to inner peace and self-discovery. Our blog offers guided meditation practices, mindfulness techniques, and insights into the benefits of a calm mind. Embark on a journey of self-awareness and serenity with us."
+    },
+    {
+        "id": 10,
+        "blog_name": "Cycling Adventures",
+        "picture": "https://media.istockphoto.com/id/961581496/photo/couple-of-young-hipsters-cycling-together-at-the-beach-at-sunrise-sky-at-wooden-deck-summer.jpg?s=2048x2048&w=is&k=20&c=VoExAx49ARhaG-DcCBGYhX0txNZwauKdOMaxKHUy71Q=",
+        "details": "Cycling Adventures is the ultimate destination for cyclists of all levels. Whether you're a road cyclist, mountain biker, or commuter, our blog has you covered. Explore cycling routes, gear reviews, and tips for optimizing your rides. Join us on exhilarating two-wheeled journeys!"
+    }
+]

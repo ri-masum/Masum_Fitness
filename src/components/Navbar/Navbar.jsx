@@ -14,11 +14,12 @@ const Navbar = () => {
          <NavLink
         to="/"
         className={({ isActive, isPending }) => 
-          isPending ? "pending" : isActive ? "uppercase text-gray-600" : ""
+          isPending ? "pending" : isActive ? "uppercase text-yellow-400" : ""
         }
       >
         Home
       </NavLink>
+        
             {/* <NavLink
         to="/blog"
         className={({ isActive, isPending }) => 
@@ -30,12 +31,27 @@ const Navbar = () => {
 
 
 {
-        user ? <button onClick={()=>logOut()} >Logout</button> :
+        user ? 
+      <>
+        <NavLink
+        to="/blogs"
+        className={({ isActive, isPending }) => 
+          isPending ? "pending" : isActive ? "uppercase text-yellow-400" : ""
+        }
+      >
+        Blogs
+      </NavLink>
+        
+        <button onClick={()=>logOut()} >Logout</button> 
+      </>
+        
+        
+        :
         <>
           <NavLink
         to="/login"
         className={({ isActive, isPending }) => 
-          isPending ? "pending" : isActive ? "uppercase text-gray-600" : ""
+          isPending ? "pending" : isActive ? "uppercase text-yellow-400" : ""
         }
       >
         Login
@@ -43,7 +59,7 @@ const Navbar = () => {
       <NavLink
         to="/signup"
         className={({ isActive, isPending }) => 
-          isPending ? "pending" : isActive ? "uppercase text-gray-600" : ""
+          isPending ? "pending" : isActive ? "uppercase text-yellow-400" : ""
         }
       >
         SignUp
