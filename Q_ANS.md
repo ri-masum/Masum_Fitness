@@ -20,7 +20,7 @@ console.log(greetign);
 
 #### Answer: B: `ReferenceError: greetign is not defined`
 
-<i>in our code we have done a simple mistake which is we have declare greeting first but when we try to assign a value in our variable we write the variable name wrong which is greetign instead of greeting and that is why the result is ReferenceError:greetign is not defined</i>
+<i>In our code we have done a simple mistake which is we have declare greeting first but when we try to assign a value in our variable we write the variable name wrong which is greetign instead of greeting and that is why the result is ReferenceError : greetign is not defined</i>
 
 </p>
 </details>
@@ -43,9 +43,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer:  C: `"12"`
 
-<i>Write your explanation here</i>
+<i>The answer will be 12 because in js when we use '+' to do sum with  string and number it performs string concatenation.that is why number 1 and  string "2" are concatenated and the result came out "12"</i>
 
 </p>
 </details>
@@ -69,9 +69,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A: `['🍕', '🍫', '🥑', '🍔']`
 
-<i>Write your explanation here</i>
+<i>the food array will be unchanged because info.favoriteFood assign the new value but it will not affect the food array which maintain its original values</i>
 
 </p>
 </details>
@@ -94,9 +94,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B: Hi there, undefined
 
-<i>Write your explanation here</i>
+<i>As we can see the sayHi function expects an argument 'name' but when we try to call the function without passing any argument it default to 'undefined ' .And that is why it will return hi there, undefined</i>
 
 </p>
 </details>
@@ -122,9 +122,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer:  C: 3
 
-<i>Write your explanation here</i>
+<i>We all know that in forEach loop its check if element is true or not . in our case nums  variable elements  1,2,3  make the condition true so the count will be incremented by one  for each of them .So count became 3 in the end of the loops</i>
 
 </p>
 </details>
