@@ -11,6 +11,6 @@ Live Link ------>>> (http://evanescent-quill.surge.sh)
     -React Routing
     -To access our Packages log in first
      otherwise after clicking any package
-      you will be redirect to login page
+     you will be redirect to login page
     -Registered Member Can visit more pages
     
