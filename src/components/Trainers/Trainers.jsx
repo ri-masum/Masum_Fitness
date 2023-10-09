@@ -1,12 +1,22 @@
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 const Trainers = () => {
  
-
+useEffect(()=>
+{
+Aos.init();
+},[])
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3" 
+    data-aos="fade-up"
+    data-aos-anchor-placement="top-center"
+    // data-aos-duration="3000"
+    >
      
 
-      <div className="card card-compact  bg-black text-white shadow-xl">
+      <div className="card card-compact  bg-black text-white shadow-xl" >
         <figure>
           <img
             src="https://media.istockphoto.com/id/1324042769/photo/confident-gym-owner.jpg?s=2048x2048&w=is&k=20&c=GnRecAchVzG907aRsjRL-D7VqC7lBdpk05hsXrDXRp0="

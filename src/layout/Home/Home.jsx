@@ -3,16 +3,25 @@ import Service from "../../components/Service/Service";
 import Transformation from "../../components/Transformation/Transformation";
 import Header from "../../components/Header/Header";
 import Trainers from "../../components/Trainers/Trainers";
+import Aos from 'aos';
+import { useEffect } from 'react';
 
+import 'aos/dist/aos.css'
 const Home = () => {
   const datas = useLoaderData();
   // console.log(datas);
+  useEffect(()=>{
+    Aos.init()
+  },[])
+  
 
   return (
-    <div className="max-w-7xl mx-auto bg-white">
-      <Header></Header>
-      <div className="mt-10">
-        <h1 className="text-3xl font-semibold text-center uppercase text-black ">
+    <div className="max-w-7xl mx-auto bg-white" >
+      <Header ></Header>
+      <div className="mt-10" >
+        <h1 className="text-3xl font-semibold text-center uppercase text-black "
+        data-aos="zoom-in"
+        >
           Welcome to Masum <br />
           Fitness{" "}
         </h1>

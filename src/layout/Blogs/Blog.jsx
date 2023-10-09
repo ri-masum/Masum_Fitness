@@ -1,4 +1,5 @@
 import PropTypes from "prop-types"
+
 const Blog = ({ trainers }) => {
   console.log(trainers);
   return (

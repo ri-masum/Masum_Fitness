@@ -1,14 +1,24 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
+
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 const Service = ({ datas }) => {
 
   const { service_name,  picture_url,details ,id} = datas;
 //   console.log(datas);
 
+useEffect(()=>{
+  Aos.init()
+},[])
  
   return (
     <div className="text-white">
-      <div className="card  bg-black shadow-xl h-[450px]">
+      <div className="card  bg-black shadow-xl h-[450px]"
+      data-aos="zoom-out-down"
+      
+      >
         <figure>
           <img
             src={picture_url}

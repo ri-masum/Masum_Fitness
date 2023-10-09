@@ -1,5 +1,6 @@
 
-
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 const Transformation = () => {
     return (
         <div className="text-black">
@@ -7,7 +8,12 @@ const Transformation = () => {
             TransFormation
           </h1>
 
-          <div className="carousel carousel-end rounded-box h-96 gap-0 border-4 border-yellow-800">
+          <div className="carousel carousel-end rounded-box h-96 gap-0 border-4 border-yellow-800" 
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+
+          >
             <div className="carousel-item">
               <img src="https://i.ibb.co/FX6PWWQ/Gym-Review.jpg" alt="Drink" />
             </div>

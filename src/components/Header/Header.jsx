@@ -1,8 +1,14 @@
 
+import Aos from 'aos';
+import { useEffect } from 'react';
 
+import 'aos/dist/aos.css'
 const Header = () => {
+  useEffect(()=>{
+    Aos.init()
+  },[])
     return (
-        <div
+        <div data-aos="fade-up"
         className="hero min-h-[70vh]"
         style={{
           backgroundImage:

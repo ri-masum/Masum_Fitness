@@ -4,6 +4,10 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import googlePng from "/google.png";
 import Swal from 'sweetalert2'
 import { BiSolidHide } from 'react-icons/bi';
+import Aos from 'aos';
+import { useEffect } from 'react';
+
+import 'aos/dist/aos.css'
 
 
 const Login = () => {
@@ -11,6 +15,9 @@ const Login = () => {
   const { login, googleLogin } = useContext(AuthContext);
   const  [error,setError]=useState('')
   const [showPass,setShowPass]=useState(false)
+  useEffect(()=>{
+    Aos.init()
+  },[])
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -39,14 +46,7 @@ const Login = () => {
 
           })
 
-        // if(!pass){
-        //   setError('password does not match')
-        //   return
-        // }
-        // else if(!email){
-        //   setError('email does not match')
-        //   return
-        // }
+      
       });
   };
  
@@ -73,12 +73,14 @@ const Login = () => {
     <div>
       <div className="hero min-h-screen bg-base-200">
 
-        <div className="hero-content flex-col ">
+        <div className="hero-content flex-col "   data-aos="zoom-in">
           <div className="text-center ">
             <h1 className="text-5xl font-bold text-black">Login now!</h1>
           </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleLogin}>
+          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
+        
+          >
+            <form onSubmit={handleLogin} >
               <div className="card-body">
                 {
                   error&& <p className="text-red-500">{error}</p>

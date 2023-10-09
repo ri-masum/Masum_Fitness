@@ -4,7 +4,10 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { updateProfile } from "firebase/auth";
 import { BiSolidHide } from 'react-icons/bi';
+import Aos from 'aos';
+import { useEffect } from 'react';
 
+import 'aos/dist/aos.css'
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -13,7 +16,9 @@ const SignUp = () => {
  const  [error,setError]=useState('')
  const [showPass,setShowPass]=useState(false)
 
-
+useEffect(()=>{
+  Aos.init()
+},[])
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -61,8 +66,8 @@ const SignUp = () => {
   };
 
   return (
-    <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content flex-col ">
+    <div className="hero min-h-screen bg-base-200" >
+      <div className="hero-content flex-col "  data-aos="zoom-in">
         <div className="text-center ">
           <h1 className="text-5xl font-bold text-black">Register now!</h1>
         </div>
