@@ -16,7 +16,7 @@ const Home = () => {
   
 
   return (
-    <div className="max-w-7xl mx-auto bg-white" >
+    <div className="max-w-7xl mx-auto bg-white overflow-hidden" >
       <Header ></Header>
       <div className="mt-10" >
         <h1 className="text-3xl font-semibold text-center uppercase text-black "

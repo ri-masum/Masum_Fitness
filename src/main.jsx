@@ -43,12 +43,12 @@ const router = createBrowserRouter([
         loader:()=>fetch('/data.json')
       },
       {
-        path:"/blogs",
+        path:"/blog",
         element:<PrivetRoute><Blogs></Blogs></PrivetRoute>,
         loader:()=>fetch('/blogs.json')
       },
       {
-        path:"/photos",
+        path:"/photo",
         element:<PrivetRoute><Photos></Photos></PrivetRoute>,
         loader:()=>fetch('/photos.json')
       }

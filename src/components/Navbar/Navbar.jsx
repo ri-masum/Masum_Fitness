@@ -30,7 +30,7 @@ const Navbar = () => {
           {user ? (
             <>
               <NavLink
-                to="/blogs"
+                to="/blog"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
@@ -42,7 +42,7 @@ const Navbar = () => {
                 Blogs
               </NavLink>
               <NavLink
-                to="/photos"
+                to="/photo"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
