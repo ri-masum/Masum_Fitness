@@ -48,7 +48,7 @@ const Trainers = () => {
       </div>
 
       
-      <div className="card card-compact  bg-orange-500 text-gray-900 shadow-xl">
+      <div className="card card-compact  bg-orange-500 text-gray-900 drop-shadow-xl">
         <figure>
           <img
             src="https://media.istockphoto.com/id/1152600445/photo/confident-young-macho-male-with-arms-crossed.jpg?s=2048x2048&w=is&k=20&c=cHr_PG0P3dCiKr8KD9djsqYTImT0XaYgtuz5fTVM2lE="

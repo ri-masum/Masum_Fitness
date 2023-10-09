@@ -15,7 +15,8 @@ import AuthProvider from './AuthProvider/AuthProvider';
 import Error from './Error/Error';
 import PrivetRoute from './PrivetRoute/PrivetRoute';
 import Blogs from './layout/Blogs/Blogs';
-import Trainers from './components/Trainers/Trainers';
+import Photos from './layout/Photos/Photos';
+
 
 const router = createBrowserRouter([
   {
@@ -46,11 +47,12 @@ const router = createBrowserRouter([
         element:<PrivetRoute><Blogs></Blogs></PrivetRoute>,
         loader:()=>fetch('/blogs.json')
       },
-      // {
-      //   path:"/trainer",
-      //   element:<Trainers></Trainers>,
-      //   loader:()=>fetch('/trainer.json')
-      // }
+      {
+        path:"/photos",
+        element:<PrivetRoute><Photos></Photos></PrivetRoute>,
+        loader:()=>fetch('/photos.json')
+      }
+    
     ]
   },
 ]);

@@ -2,8 +2,8 @@ import PropTypes from "prop-types"
 const Blog = ({ trainers }) => {
   console.log(trainers);
   return (
-    <div>
-      <div className="hero min-h-[50vh] min-w-[40vh] border-4 bg-gray-800">
+    <div >
+      <div className="hero min-h-[50vh]  mb-2  bg-gray-900">
         <div className="hero-content flex-col lg:flex-row">
           <img
             src={trainers.picture}
