@@ -18,9 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B: `ReferenceError: greetign is not defined`
 
-<i>Write your explanation here</i>
+<i>in our code we have done a simple mistake which is we have declare greeting first but when we try to assign a value in our variable we write the variable name wrong which is greetign instead of greeting and that is why the result is ReferenceError:greetign is not defined</i>
 
 </p>
 </details>
