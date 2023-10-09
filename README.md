@@ -1,8 +1,16 @@
-# React + Vite
+# Masum | Fitness
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Link ------>>> (http://evanescent-quill.surge.sh)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Features
+    -Google Login
+    -Email Password SignUp
+    -UserName and Profile show at Navbar after login
+    -Logout
+    -Private Route
+    -React Routing
+    -To access our Packages log in first
+     otherwise after clicking any package
+      you will be redirect to login page
+    -Registered Member Can visit more pages
+    

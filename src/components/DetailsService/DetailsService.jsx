@@ -1,4 +1,4 @@
-import {  useLoaderData, useParams } from "react-router-dom";
+import {  Link, useLoaderData, useParams } from "react-router-dom";
 
 
 const DetailsService = () => {
@@ -25,7 +25,11 @@ const DetailsService = () => {
             </div>
            <h1 className="text-center mt-10 mb-3 text-4xl font-extrabold">About the Training</h1>
             <h1 className="textarea-sm">{details}</h1>
+
+            <div className=" flex justify-center mt-5">
+            <Link to='/' className=" text-yellow-500  text-lg mb-5 hover:cursor-pointer">Go Back</Link>
             
+            </div>
         </div>
     );
 };
