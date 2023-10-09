@@ -6,7 +6,7 @@ const Blogs = () => {
     const trainers=useLoaderData()
     // console.log(trainers);
     return (
-        <div>
+        <div className="max-w-7xl mx-auto">
             {
                 trainers.map(trainer=><Blog key={trainer.id} trainers={trainer}></Blog>)
             }

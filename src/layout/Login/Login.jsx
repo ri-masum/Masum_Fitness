@@ -1,19 +1,24 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import googlePng from "/google.png";
 import Swal from 'sweetalert2'
+import { BiSolidHide } from 'react-icons/bi';
 
 
 const Login = () => {
     const navigate=useNavigate()
   const { login, googleLogin } = useContext(AuthContext);
+  const  [error,setError]=useState('')
+  const [showPass,setShowPass]=useState(false)
 
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const pass = e.target.password.value;
     console.log(email, pass);
+    setError('')
+  
     login(email, pass)
       .then((result) => {
         console.log(result.user);
@@ -33,6 +38,15 @@ const Login = () => {
             text: `${err.message}`
 
           })
+
+        // if(!pass){
+        //   setError('password does not match')
+        //   return
+        // }
+        // else if(!email){
+        //   setError('email does not match')
+        //   return
+        // }
       });
   };
  
@@ -66,6 +80,9 @@ const Login = () => {
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={handleLogin}>
               <div className="card-body">
+                {
+                  error&& <p className="text-red-500">{error}</p>
+                }
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Email</span>
@@ -75,6 +92,7 @@ const Login = () => {
                     name="email"
                     placeholder="email"
                     className="input input-bordered text-black"
+                    required
                   />
                 </div>
                 <div className="form-control">
@@ -82,14 +100,16 @@ const Login = () => {
                     <span className="label-text">Password</span>
                   </label>
                   <input
-                    type="password"
+                    type={ showPass? 'text' : 'password'}
                     name="password"
                     placeholder="password"
-                    className="input input-bordered text-black"
+                    className="input input-bordered text-black "
+                    required
                   />
+                  <span onClick={()=>setShowPass(!showPass)} className="text-blue-500 absolute right-10 top-44 hover:cursor-pointer"><BiSolidHide></BiSolidHide></span>
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn btn-accent">Login</button>
+                  <button className="btn bg-yellow-400">Login</button>
                 </div>
               </div>
             </form>

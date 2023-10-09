@@ -3,13 +3,16 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { updateProfile } from "firebase/auth";
+import { BiSolidHide } from 'react-icons/bi';
+
 
 const SignUp = () => {
   const navigate = useNavigate();
   const { signup } = useContext(AuthContext);
 
-  const [userName,setUserName]=useState(null)
-  const [userPhoto, setUserPhoto] = useState(null);
+ const  [error,setError]=useState('')
+ const [showPass,setShowPass]=useState(false)
+
 
 
   const handleSignUp = (e) => {
@@ -19,7 +22,20 @@ const SignUp = () => {
     const name=e.target.name.value;
     const photo=e.target.photo.value;
     console.log(email, pass,name,photo);
+    setError('')
 
+    if(pass.length <6){
+      setError('password should be at least 6 Character')
+      return
+    }
+    else if(!/[A-Z]/.test(pass)){
+      setError('password must contain at least one Upper latter')
+      return
+    }
+    else if(!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(pass)){
+      setError('password must contain at least one special character')
+      return
+    }
     signup(email, pass,name,photo)
       .then((result) => {
         console.log(result.user);
@@ -40,11 +56,7 @@ const SignUp = () => {
       })
       .catch((err) => {
         console.error(err);
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: `${err.message}`,
-        });
+        setError(err.message);
       });
   };
 
@@ -57,6 +69,7 @@ const SignUp = () => {
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={handleSignUp}>
             <div className="card-body">
+              {error && <p className="text-red-500">{error}</p>}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
@@ -97,14 +110,16 @@ const SignUp = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                  type="password"
+                  type={ showPass? 'text' : 'password'}
                   name="password"
                   placeholder="password"
                   className="input input-bordered text-black"
                 />
+              <span onClick={()=>setShowPass(!showPass)} className="text-blue-500 absolute right-10 bottom-44 hover:cursor-pointer "><BiSolidHide></BiSolidHide></span>
+
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-accent">Login</button>
+                <button className="btn bg-yellow-400">SignUp</button>
               </div>
             </div>
           </form>

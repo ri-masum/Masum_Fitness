@@ -8,7 +8,7 @@ const Service = ({ datas }) => {
  
   return (
     <div className="text-white">
-      <div className="card  bg-gray-600 shadow-xl h-[450px]">
+      <div className="card  bg-black shadow-xl h-[450px]">
         <figure>
           <img
             src={picture_url}
@@ -16,13 +16,18 @@ const Service = ({ datas }) => {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{service_name}</h2>
+          <h2 className="card-title font-mono text-yellow-300">{service_name}</h2>
          {
-            details.length >80 ?  <p className='text-xs'>{details.slice(0,80)}</p> :<p className='text-xs'>{details}</p>
+            details.length >80 ? 
+            <>
+             <p className='text-xs'>{details.slice(0,80)}  <Link to={`/details/${id}`}> <span  className="text-yellow-400  font-semibold">full Details</span></Link></p>
+           
+            </>
+            :<p className='text-xs'>{details}</p>
          }
-          <div className="card-actions justify-end">
-           <Link to={`/details/${id}`}> <button  className="btn ">full Details</button></Link>
-          </div> 
+          {/* <div className="card-actions justify-end">
+           <Link to={`/details/${id}`}> <p  className="text-yellow-400 ">full Details</p></Link>
+          </div>  */}
         </div>
       </div>
     </div>
